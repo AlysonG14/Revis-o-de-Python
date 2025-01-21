@@ -15,8 +15,8 @@ solicite = int(input("Digite o número solicitado: "))
 count = 0
 
 while solicite >= count:
-        print("Número atual: {}".format(solicite)) 
-        solicite = int(input("Digite o número solicitado: "))
+    print('Numero atual {}'.format(solicite))
+    solicite = int(input("Digite o número solicitado: "))
 
 else:
-     print('Acabou, você digitou negativo!')
+    print('Acabou, você digitou o número negativo: {}'.format(solicite))
