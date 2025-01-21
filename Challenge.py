@@ -100,6 +100,21 @@ else:
 
     # - Implementando a Busca Binária
 
+    def busca_binaria(lista, elemento):
+        inferior = 0
+        superiror = len(lista) - 1
+
+        while inferior <= superiror:
+            metade = (inferior + superiror) // 2
+
+            if lista[metade] == elemento:
+                return True
+            elif lista[metade] <= elemento:
+                inferior = metade + 1
+            else:
+                superiror = metade - 1
+        return False
+
 
 
 
