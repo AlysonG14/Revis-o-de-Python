@@ -40,7 +40,7 @@ print("Lista de Alunos:", (resultado_da_ordenação))
 
 # Segundo Desafio - Insertion Sort e Bubble Sort
 
-# - Implementando o Insertion Sort:
+    # - Implementando o Insertion Sort:
 
 def InsertSort(lista):
     matriz = len(lista)          # Obtenha o comprimento da matriz
@@ -61,11 +61,46 @@ lista_numérica = [1, 5, 6, 8, 10, 3, 4]
 InsertSort(lista_numérica)
 print(lista_numérica)
 
-# - Implementando o Bubble Sort
+    # - Implementando o Bubble Sort
 
+letras = ['G', 'A', 'R', 'F', 'I', 'E', 'L', 'D'] # Cria uma lista de letras para ser ordenado
+tamanho = len(letras)
+                                                 
+for i in range(tamanho - 1):                     # Cria um laço de repetição Loop para que ele consiga contar a partir de letra para o final
+    for j in range(tamanho - i - 1):
+        if letras[j] > letras[j+1]:
+         letras[j], letras[j+1] = letras[j+1], letras[j]                
 
+print('Lista Ordenada') # Imprime a lista desejada
+for i in range(tamanho):
+    print(letras[i], end=' ')
+print('')                      
 
+   
 # Terceiro Desafio - Busca Linear e Busca Binária 
+
+    # - Implementando a Busca Linear
+
+def buscaLinear(Primeiro, Segundo):
+    i = 0
+    while i < len(Primeiro):
+        if Primeiro[i] == Segundo:
+            return i
+        i += 1
+    return -1
+numeros = [50, 21, 68, 90, 74, 30, 1, 5, 44, 126, 4, 9]
+print(f"Números: {numeros}")
+
+posicao = buscaLinear(numeros, 50)
+if posicao >= 0:
+    print('O elemento foi encontrado na posição: {}'.format(posicao))
+else:
+    print('O elemento não foi encontrado! Tente novamente!')
+
+
+    # - Implementando a Busca Binária
+
+
 
 
 # Quarto Desafio - Pesquisar sobre complexidade de algoritmo e calcule a complexidade dos algoritmos anteriores
