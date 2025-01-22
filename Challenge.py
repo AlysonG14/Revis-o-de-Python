@@ -71,7 +71,7 @@ for i in range(tamanho - 1):                     # Cria um laço de repetição 
         if letras[j] > letras[j+1]:
          letras[j], letras[j+1] = letras[j+1], letras[j]                
 
-print('Lista Ordenada') # Imprime a lista desejada
+print('Lista Ordenada')                          # Imprime a lista desejada
 for i in range(tamanho):
     print(letras[i], end=' ')
 print('')                      
@@ -81,7 +81,7 @@ print('')
 
     # - Implementando a Busca Linear
 
-def buscaLinear(Primeiro, Segundo):
+def buscaLinear(Primeiro, Segundo):                  # Cria uma função de Busca Linear
     i = 0
     while i < len(Primeiro):
         if Primeiro[i] == Segundo:
@@ -89,7 +89,7 @@ def buscaLinear(Primeiro, Segundo):
         i += 1
     return -1
 numeros = [50, 21, 68, 90, 74, 30, 1, 5, 44, 126, 4, 9]
-print(f"Números: {numeros}")
+print(f"Lista ordenada para busca linear: {numeros}")
 
 posicao = buscaLinear(numeros, 50)
 if posicao >= 0:
@@ -100,20 +100,34 @@ else:
 
     # - Implementando a Busca Binária
 
-    def busca_binaria(lista, elemento):
-        inferior = 0
-        superiror = len(lista) - 1
+# Criação de função para busca binária
+def busca_binaria(lista, elemento): 
+    inferior = 0
+    superior = len(lista) - 1
 
-        while inferior <= superiror:
-            metade = (inferior + superiror) // 2
+    while inferior <= superior:
+        metade = (inferior + superior) // 2
 
-            if lista[metade] == elemento:
-                return True
-            elif lista[metade] <= elemento:
-                inferior = metade + 1
-            else:
-                superiror = metade - 1
-        return False
+        if lista[metade] == elemento:
+            return metade  # Retorna a posição do elemento
+        elif lista[metade] < elemento:
+            inferior = metade + 1
+        else:
+            superior = metade - 1
+    return -1
+
+# Lista ordenada para a busca binária
+lista_numeros = sorted([20, 80, 36, 41, 22, 4, 6, 9, 66])
+print(f"Lista ordenada para busca binária: {lista_numeros}")
+
+busca_de_elemento = 4
+
+# Usando busca binária
+resultado = busca_binaria(lista_numeros, busca_de_elemento)
+if resultado >= 0:
+    print(f'O elemento foi encontrado na posição: {resultado}')
+else:
+    print(f'O elemento {busca_de_elemento} não foi encontrado na lista!')
 
 
 
