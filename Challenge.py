@@ -133,4 +133,5 @@ else:
 
 
 # Quarto Desafio - Pesquisar sobre complexidade de algoritmo e calcule a complexidade dos algoritmos anteriores
+    # - Vou mostrar pelo Word sobre cada um deles!
 
